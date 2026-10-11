@@ -221,14 +221,21 @@ img {
 
 .site-main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .screen {
   width: 100%;
   min-height: auto;
-  padding: 24px 24px 22px;
+  padding: 26px 24px 18px;
   position: relative;
   scroll-margin-top: 110px;
+}
+
+.site-main > .screen + .screen {
+  margin-top: 8px;
 }
 
 .screen-inner {
@@ -238,6 +245,13 @@ img {
 
 .hero-screen {
   padding-top: 18px;
+  padding-bottom: 12px;
+}
+
+.stats-screen,
+.image-screen {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .hero-grid {
@@ -461,6 +475,12 @@ img {
   display: block;
   font-size: clamp(1.8rem, 2vw, 2.2rem);
   color: var(--gold-600);
+  min-height: 2.6rem;
+  transition: transform 0.2s ease;
+}
+
+.stat-box strong.is-animated {
+  transform: scale(1.02);
 }
 
 .stat-box span {
